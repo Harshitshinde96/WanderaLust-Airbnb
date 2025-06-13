@@ -68,11 +68,12 @@ const sessionOptions = {
   },
 };
 
-// app.get("/", (req, res) => {
-//   res.send(
-//     "Everything is working fine!! To use this app, please visit /listings (enter /listings in the URL bar) to see all the listings."
-//   );
-// });
+app.get("/", (req, res) => {
+  // res.send(
+  //   "Everything is working fine!! To use this app, please visit /listings (enter /listings in the URL bar) to see all the listings."
+  // );
+  res.redirect("/listings");
+});
 
 app.use(session(sessionOptions));
 app.use(flash());
