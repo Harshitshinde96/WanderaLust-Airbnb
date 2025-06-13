@@ -105,10 +105,10 @@ app.use((err, req, res, next) => {
   const { statusCode = 500, message = "Something Went Wrong" } = err;
 
   // 🔴 Error Logging
-  console.error("🔴 ERROR OCCURRED:");
-  console.error("📄 MESSAGE:", err.message || message);
-  console.error("🧾 STACK TRACE:", err.stack);
-  console.error("🧠 FULL ERROR OBJECT:", err);
+  // console.error("🔴 ERROR OCCURRED:");
+  // console.error("📄 MESSAGE:", err.message || message);
+  // console.error("🧾 STACK TRACE:", err.stack);
+  // console.error("🧠 FULL ERROR OBJECT:", err);
 
   // Render your custom error page
   res.status(statusCode).render("error.ejs", { message });
