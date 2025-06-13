@@ -42,7 +42,7 @@ module.exports.createListing = async (req, res, next) => {
   newListing.geometry = response.body.features[0].geometry; // Adding the geometry data to the listing
 
   let savedListing = await newListing.save();
-  console.log(savedListing);
+  // console.log(savedListing);
   req.flash("success", "Successfully created a new listing!");
   res.redirect("/listings");
 };
@@ -86,7 +86,6 @@ module.exports.destroyListing = async (req, res) => {
 
   res.redirect("/listings");
 };
-
 
 module.exports.searchListings = async (req, res) => {
   const { q } = req.query;

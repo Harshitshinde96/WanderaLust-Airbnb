@@ -32,7 +32,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(DB_URL); 
+  await mongoose.connect(DB_URL);
 }
 
 app.engine("ejs", ejsMate);
@@ -68,11 +68,11 @@ const sessionOptions = {
   },
 };
 
-app.get("/", (req, res) => {
-  res.send(
-    "Everything is working fine!! To use this app, please visit /listings (enter /listings in the URL bar) to see all the listings."
-  );
-});
+// app.get("/", (req, res) => {
+//   res.send(
+//     "Everything is working fine!! To use this app, please visit /listings (enter /listings in the URL bar) to see all the listings."
+//   );
+// });
 
 app.use(session(sessionOptions));
 app.use(flash());
